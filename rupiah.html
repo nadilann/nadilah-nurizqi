@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung kurs rupiah</title>
+</head>
+<body>
+    Masukan jumlah dolar: <input type="number" id="jumlah_dolar" onchange="hitung_rupiah()">
+    <p>Nilai dalam rupiah: <span id="nilai_rupiah"></span></p>
+    <script>
+        function hitung_rupiah(){
+            const jumlah_dolar =document.getElementById("jumlah_dolar").value;
+            const kurs = 155500;
+
+            const nilai_rupiah = jumlah_dolar * kurs;
+            document.getElementById("nilai_rupiah").innerText = "Rp. "+nilai_rupiah;
+        }
+    </script>
+</body>
+</html>
